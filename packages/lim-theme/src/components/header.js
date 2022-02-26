@@ -35,6 +35,7 @@ const Menu = () => {
         <StyledMenu>
             <Link link="/">Home</Link>
             <Link link="/page/2">More posts</Link>
+            <Link link="/category/brain-games">Brain games</Link>
             <Link link="/أفضل-10-جامعات-في-العالم-2/">Post</Link>
         </StyledMenu>
     )
@@ -46,7 +47,7 @@ const Header = ({ state, actions }) => {
             <StyledHeaderContent>
                 <h1>لوك ان مينا جديد جديد</h1>
                 {state.theme.isUrlVisible
-                    ? <><p>Current URL: {state.router.link}</p> <button onClick={actions.theme.toggleUrl}>&#x3c; Hide URL</button></>
+                    ? <><p>Current df: {state.router.link}</p> <button onClick={actions.theme.toggleUrl}>&#x3c; Hide URL</button></>
                     : <button onClick={actions.theme.toggleUrl}>Show URL &#x3e;</button>
                 }
                 <Menu />

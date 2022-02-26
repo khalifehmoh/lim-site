@@ -9,6 +9,7 @@ import Error from "./404"
 import MainHead from "./head"
 import { connect, Global, css, styled, Head } from "frontity"
 import Loading from "./loading"
+import Category from "./category"
 
 const StyledMain = styled.main`
   max-width: 800px;
@@ -34,7 +35,6 @@ const StyledMain = styled.main`
 
 const Root = ({ state }) => {
   const data = state.source.get(state.router.link)
-
   return (
     <>
       {/* Global styles */}
@@ -66,6 +66,8 @@ const Root = ({ state }) => {
         <Switch>
           <Loading when={data.isFetching} />
           <List when={data.isArchive} />
+          {/* isCategory should be used here */}
+          <Category when={state.router.link.startsWith('/category/')} />
           <Post when={data.isPost} />
           <Page when={data.isPage} />
           <Error when={data.isError} />
