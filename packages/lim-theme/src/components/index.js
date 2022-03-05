@@ -10,6 +10,14 @@ import MainHead from "./head"
 import { connect, Global, css, styled, Head } from "frontity"
 import Loading from "./loading"
 import Category from "./category"
+import bootstrapCss from 'bootstrap/dist/css/bootstrap.min.css';
+import { fixCss } from '../utils/fixCss'
+
+const fixedBootstrapCss = fixCss(bootstrapCss)
+
+const BootstrapStyles = () => (
+  <Global styles={css(fixedBootstrapCss)} />
+);
 
 const StyledMain = styled.main`
   max-width: 800px;
@@ -38,6 +46,7 @@ const Root = ({ state }) => {
   return (
     <>
       {/* Global styles */}
+      <BootstrapStyles />
       <Global
         styles={css`
             html {

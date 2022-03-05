@@ -15,7 +15,11 @@ const settings = {
       "name": "@frontity/wp-source",
       "state": {
         "source": {
-          "url": "https://lookinmena.com"
+          "url": "https://lookinmena.com",
+          "params": {
+            "per_page": 20,
+            "type": ["post", "page", "category"],
+          }
         }
       }
     },

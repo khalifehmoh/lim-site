@@ -1,6 +1,7 @@
 import React from "react"
 import Link from "@frontity/components/link"
 import { connect, styled } from "frontity"
+import { Button } from "react-bootstrap"
 
 const StyledHeader = styled.header`
     background-color: #e5edee;
@@ -47,8 +48,8 @@ const Header = ({ state, actions }) => {
             <StyledHeaderContent>
                 <h1>لوك ان مينا جديد جديد</h1>
                 {state.theme.isUrlVisible
-                    ? <><p>Current df: {state.router.link}</p> <button onClick={actions.theme.toggleUrl}>&#x3c; Hide URL</button></>
-                    : <button onClick={actions.theme.toggleUrl}>Show URL &#x3e;</button>
+                    ? <><p>Current df: {state.router.link}</p> <Button onClick={actions.theme.toggleUrl}>&#x3c; Hide URL</Button></>
+                    : <Button onClick={actions.theme.toggleUrl}>Show URL &#x3e;</Button>
                 }
                 <Menu />
             </StyledHeaderContent>

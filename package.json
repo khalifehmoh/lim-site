@@ -22,8 +22,10 @@
     "@frontity/mars-theme": "^1.6.2",
     "@frontity/tiny-router": "^1.4.4",
     "@frontity/wp-source": "^1.11.7",
+    "bootstrap": "^5.1.3",
     "dayjs": "^1.10.7",
     "frontity": "^1.17.1",
-    "lim-theme": "file:packages/lim-theme"
+    "lim-theme": "file:packages/lim-theme",
+    "react-bootstrap": "^2.2.0"
   }
 }
