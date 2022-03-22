@@ -13,7 +13,12 @@
   "scripts": {
     "dev": "frontity dev",
     "build": "frontity build",
-    "serve": "frontity serve"
+    "serve": "frontity serve",
+    "css": "npm-run-all css-compile css-prefix css-minify",
+    "css-compile": "sass --style expanded --source-map --embed-sources --no-error-css packages/lim-theme/src/styles/_bootstrap.scss  releasedStyles/bootstrap.css",
+    "css-minify": "cleancss -O1 --format breakWith=lf --with-rebase --source-map --source-map-inline-sources --output releasedStyles/ --batch --batch-suffix \".min\" \"releasedStyles/*.css\" \"!releasedStyles/*.min.css\" \"!releasedStyles/*rtl*.css\"",
+    "css-rtl": "cross-env NODE_ENV=RTL postcss --config build/postcss.config.js --dir \"dist/css\" --ext \".rtl.css\" \"dist/css/*.css\" \"!dist/css/*.min.css\" \"!dist/css/*.rtl.css\"",
+    "css-prefix": "postcss --replace releasedStyles/bootstrap.css --use autoprefixer --map"
   },
   "prettier": {},
   "dependencies": {
@@ -22,10 +27,18 @@
     "@frontity/mars-theme": "^1.6.2",
     "@frontity/tiny-router": "^1.4.4",
     "@frontity/wp-source": "^1.11.7",
-    "bootstrap": "^5.1.3",
+    "bootstrap": "https://github.com/khalifehmoh/lim-bootstrap.git#main",
     "dayjs": "^1.10.7",
     "frontity": "^1.17.1",
     "lim-theme": "file:packages/lim-theme",
     "react-bootstrap": "^2.2.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.4",
+    "clean-css-cli": "^5.5.2",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.12",
+    "postcss-cli": "^9.1.0",
+    "sass": "^1.49.9"
   }
 }

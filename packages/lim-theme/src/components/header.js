@@ -14,6 +14,20 @@ const StyledHeader = styled.header`
     }
 `
 
+const StyledButton = styled(Button)`
+  color: palevioletred;
+  font-size: 1em;
+  margin: 1em;
+  padding: 0.25em 1em;
+  border: 2px solid palevioletred;
+  border-radius: 3px;
+`;
+
+// Define what props.theme will look like
+const theme = {
+    'primary': "mediumseagreen"
+};
+
 const StyledHeaderContent = styled.div`
   max-width: 800px;
   padding: 2em 1em;
@@ -49,11 +63,12 @@ const Header = ({ state, actions }) => {
                 <h1>لوك ان مينا جديد جديد</h1>
                 {state.theme.isUrlVisible
                     ? <><p>Current df: {state.router.link}</p> <Button onClick={actions.theme.toggleUrl}>&#x3c; Hide URL</Button></>
-                    : <Button onClick={actions.theme.toggleUrl}>Show URL &#x3e;</Button>
+                    : <StyledButton onClick={actions.theme.toggleUrl}>Show URL &#x3e;</StyledButton>
                 }
                 <Menu />
             </StyledHeaderContent>
         </StyledHeader>
+
     )
 }
 
