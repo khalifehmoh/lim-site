@@ -10,20 +10,15 @@ import MainHead from "./head"
 import { connect, Global, css, styled, Head } from "frontity"
 import Loading from "./loading"
 import Category from "./category"
-import bootstrapCss from '../../../../releasedStyles/bootstrap.min.css';
+import bootstrapCss from '../../../../releasedStyles/bootstrap.rtl.min.css';
 // import bootstrapCss from 'bootstrap/dist/css/bootstrap.min.css';
 import { fixCss } from '../utils/fixCss'
-import themeCss from "../styles/theme.css"
 
 
 const fixedBootstrapCss = fixCss(bootstrapCss)
 
 const BootstrapStyles = () => (
   <Global styles={css(fixedBootstrapCss)} />
-);
-
-const ThemeStyles = () => (
-  <Global styles={css(themeCss)} />
 );
 
 const StyledMain = styled.main`
@@ -54,7 +49,6 @@ const Root = ({ state }) => {
     <>
       {/* Global styles */}
       <BootstrapStyles />
-      <ThemeStyles />
       <Global
         styles={css`
             html {
