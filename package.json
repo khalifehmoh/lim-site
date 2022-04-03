@@ -16,9 +16,9 @@
     "serve": "frontity serve",
     "css": "npm-run-all css-compile css-prefix css-rtl css-minify",
     "css-compile": "sass --style expanded --source-map --embed-sources --no-error-css packages/lim-theme/src/styles/_bootstrap.scss  releasedStyles/bootstrap.css",
-    "css-minify": "cleancss -O1 --format breakWith=lf --with-rebase --source-map --source-map-inline-sources --output releasedStyles/ --batch --batch-suffix \".min\" \"releasedStyles/*.css\" \"!releasedStyles/*.min.css\" \"!releasedStyles/*rtl*.css\"",
-    "css-rtl": "cleancss -O1 --format breakWith=lf --with-rebase --source-map --source-map-inline-sources --output releasedStyles/ --batch --batch-suffix \".min\" \"releasedStyles/*rtl.css\" \"!releasedStyles/*.min.css\"",
-    "css-prefix": "postcss --config postcss.config.js --replace releasedStyles/bootstrap.css --use autoprefixer --map"
+    "css-minify": "cleancss -O1 --format breakWith=lf --with-rebase --source-map --source-map-inline-sources --output releasedStyles/ --batch --batch-suffix \".min\" \"releasedStyles/*.css\" \"!releasedStyles/*.min.css\"",
+    "css-rtl": "cross-env NODE_ENV=RTL postcss --config postcss.config.js --dir \"releasedStyles\" --ext \".rtl.css\" \"releasedStyles/*.css\" \"!releasedStyles/*.min.css\" \"!releasedStyles/*.rtl.css\"",
+    "css-prefix": "postcss --config postcss.config.js --replace \"releasedStyles/*.css\" \"!releasedStyles/*.rtl*.css\" \"!releasedStyles/*.min.css\""
   },
   "prettier": {},
   "dependencies": {

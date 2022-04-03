@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import Link from "@frontity/components/link"
 import Switch from "@frontity/components/switch"
 import List from "./list"
@@ -44,7 +44,17 @@ const StyledMain = styled.main`
 `
 
 const Root = ({ state }) => {
-  const data = state.source.get(state.router.link)
+  const data = state.source.get(state.router.link);
+  // @todo: investigate sourcemap for BS
+  // const addSourceMap = () => {
+  //   const bsTag = document.head.querySelector('style');
+  //   bsTag.textContent = bsTag.textContent + '/*# sourceMappingURL=/packages/src/bootstrap.css.map */'
+  // }
+
+  // useEffect(() => {
+  //   addSourceMap()
+  // }, [])
+
   return (
     <>
       {/* Global styles */}
@@ -77,6 +87,7 @@ const Root = ({ state }) => {
           <Loading when={data.isFetching} />
           <List when={data.isArchive} />
           {/* isCategory should be used here */}
+          {/* <Category when={data.isCategory} /> */}
           <Category when={state.router.link.startsWith('/category/')} />
           <Post when={data.isPost} />
           <Page when={data.isPage} />
