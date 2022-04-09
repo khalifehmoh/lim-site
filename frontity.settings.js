@@ -2,9 +2,9 @@ const settings = {
   "name": "lim-site",
   "state": {
     "frontity": {
-      "url": "https://test.frontity.org",
-      "title": "Test Frontity Blog",
-      "description": "WordPress installation for Frontity development"
+      "url": "https://staging.lookinmena.com",
+      "title": "LIM 2022",
+      "description": "LIM React"
     }
   },
   "packages": [
@@ -18,7 +18,7 @@ const settings = {
           "url": "https://staging.lookinmena.com",
           "params": {
             "per_page": 20,
-            "type": ["post", "page", "category"],
+            "type": ["post", "page", "category"]
           }
         }
       }
