@@ -13,6 +13,7 @@ import Category from "./category"
 import bootstrapCss from '../../../../releasedStyles/bootstrap.rtl.min.css';
 // import bootstrapCss from 'bootstrap/dist/css/bootstrap.min.css';
 import { fixCss } from '../utils/fixCss'
+import Assesment from "./assesment"
 
 
 const fixedBootstrapCss = fixCss(bootstrapCss)
@@ -78,13 +79,17 @@ const Root = ({ state }) => {
         <title>LIM</title>
         <meta
           name="description"
-          content="Based on the Frontity step by step tutorial"
+          content="LIM site"
         />
       </Head>
       <Header />
       <StyledMain>
         <Switch>
           <Loading when={data.isFetching} />
+          {/* Custom pages */}
+          <Assesment when={data.isAssesment} />
+
+          {/* Regular site pages */}
           <List when={data.isArchive} />
           {/* isCategory should be used here */}
           {/* <Category when={data.isCategory} /> */}
