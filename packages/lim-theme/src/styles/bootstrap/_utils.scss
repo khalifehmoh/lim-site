@@ -1,0 +1,16 @@
+$additional-spacers: (
+    1_5x: $spacer * 1.5,
+    2x: $spacer * 2,
+    2_5x: $spacer * 2.5,
+    3x: $spacer * 3 ,
+    3_5x: $spacer * 3.5,
+    4x: $spacer * 4,
+    4_5x: $spacer * 4.5,
+    5x: $spacer * 5
+);
+
+$spacers: map-merge($spacers, $additional-spacers);
+
+@import "../../../../../node_modules/bootstrap/scss/utilities";
+
+// Add here additional utils or modify existing BS utils
