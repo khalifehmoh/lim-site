@@ -1,4 +1,4 @@
-import Root from "./pages";
+import Root from "./root";
 import handlers from "./handlers";
 
 export default {
