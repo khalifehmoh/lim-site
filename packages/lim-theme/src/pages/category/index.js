@@ -3,7 +3,8 @@ import { connect } from "frontity";
 import { getPostsFromCategory } from "../../utils";
 import StoriesGrid from "../../components/stories-grid";
 
-const Category = ({ state, actions }) => {
+const Category = (props) => {
+  const { state, actions, dontLazyloadFirstCard } = props;
   // This is a workaround and it has to be done another way
   const [data, setData] = useState([]);
   const categorySlug = state.router.link.replace(/(\/)?(category)?/g, "");
@@ -20,7 +21,7 @@ const Category = ({ state, actions }) => {
     const posts = data.map(({ type, id }) => state.source[type][id]);
     return (
       <section className="py-5">
-        <StoriesGrid state={state} items={posts} />
+        <StoriesGrid state={state} items={posts} dontLazyloadFirstCard={dontLazyloadFirstCard}/>
       </section>
     );
   }
