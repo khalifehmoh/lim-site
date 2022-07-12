@@ -16,9 +16,10 @@ SwiperCore.use([Navigation, Pagination, A11y]);
 
 //Styles
 import GlobalStyles from "./styles/global";
+import FontsStyles from "./styles/fonts";
 import { StyledMain } from "./pages/styles";
 import BootstrapStyles from "./styles/bootstrap/bootstrap-styles";
-import SwiperStyles from "./styles/swiper/swiper-styles";
+import SwiperStyles from "./styles/swiper/swiper-styles"; // Try moving the specifc styles to the used component only
 
 const Root = ({ state }) => {
   const data = state.source.get(state.router.link);
@@ -37,6 +38,7 @@ const Root = ({ state }) => {
       {/* Main styles */}
       <BootstrapStyles />
       <GlobalStyles />
+      <FontsStyles />
       <SwiperStyles />
 
       <Head>
@@ -51,7 +53,7 @@ const Root = ({ state }) => {
           <Assesment when={data.isAssesment} />
 
           {/* Regular site pages */}
-          <List when={data.isArchive} dontLazyloadFirstCard/>
+          <List when={data.isArchive} dontLazyloadFirstCard />
           {/* isCategory should be used here */}
           {/* <Category when={data.isCategory} /> */}
           <Category when={state.router.link.startsWith("/category/")} />

@@ -3,6 +3,8 @@ import Link from "@frontity/components/link";
 import { connect } from "frontity";
 import { Button } from "react-bootstrap";
 import { StyledHeader, StyledHeaderContent, StyledMenu } from "./styles";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { solid } from "@fortawesome/fontawesome-svg-core/import.macro"; // <-- import styles to be used
 
 const Menu = () => {
   return (
@@ -20,6 +22,7 @@ const Header = ({ state, actions }) => {
     <StyledHeader>
       <StyledHeaderContent>
         <h1>لوك ان مينا جديد جديد</h1>
+        {/* <FontAwesomeIcon icon={solid("user-secret")} /> */}
         {state.theme.isUrlVisible ? (
           <>
             <p>Current df: {state.router.link}</p>{" "}
