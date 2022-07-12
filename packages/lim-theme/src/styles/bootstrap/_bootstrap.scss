@@ -1,11 +1,11 @@
 // This project doesn't support SCSS as modules and instead it uses Emotion.js
-// so a SCSS complier is added and only used to complie Bootstrap styles 
+// so a SCSS complier is added and used to complie Bootstrap styles and to add basic stuff only 
 
 // @TODO: Fix the issue of the css compiler not compliling the Bootstrap classes as expected making it harder to debug them
 
 // Configuration
 @import "../../../../../node_modules/bootstrap/scss/functions";
-@import './variables';
+@import '../variables';
 @import "../../../../../node_modules/bootstrap/scss/maps";
 @import "../../../../../node_modules/bootstrap/scss/mixins";
 @import "./utils";

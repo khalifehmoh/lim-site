@@ -1,10 +1,11 @@
-
+// Customize BS variables
 // Theme colors
 $primary: #002f46;
 $secondary: #E8476F;
 
 @import "../../../../../node_modules/bootstrap/scss/variables";
 
+// Other variables
 // Font sizes
 $font-size-xs: $font-size-base * 0.75; // 12px
 $font-size-sm: $font-size-base * 0.875; // 14px
