@@ -1,24 +1,24 @@
 import React, { useEffect } from "react";
 import Switch from "@frontity/components/switch";
-import List from "./list/";
-import Article from "./article/";
-import Page from "./page/";
-import Header from "../components/header/";
-import Error from "./404/";
+import List from "./pages/list";
+import Article from "./pages/article";
+import Page from "./pages/page";
+import Header from "./components/header";
+import Error from "./pages/404";
 import { connect, Head } from "frontity";
-import Loading from "../components/UI/loading/";
-import Category from "./category/";
-import Assesment from "../custom-pages/assesment/";
+import Loading from "./components/UI/loading";
+import Category from "./pages/category";
+import Assesment from "./custom-pages/assesment";
 
 //Swiper
 import SwiperCore, { Navigation, Pagination, A11y } from "swiper";
 SwiperCore.use([Navigation, Pagination, A11y]);
 
 //Styles
-import GlobalStyles from "../styles/global";
-import { StyledMain } from "./styles";
-import BootstrapStyles from "../styles/bootstrap/bootstrap-styles";
-import SwiperStyles from "../styles/swiper/swiper-styles";
+import GlobalStyles from "./styles/global";
+import { StyledMain } from "./pages/styles";
+import BootstrapStyles from "./styles/bootstrap/bootstrap-styles";
+import SwiperStyles from "./styles/swiper/swiper-styles";
 
 const Root = ({ state }) => {
   const data = state.source.get(state.router.link);
