@@ -13,18 +13,16 @@ const GlobalStyles = () => (
         box-sizing: border-box;
       }
 
+      body {
+        background-color: var(--bs-white);
+      }
+
       img {
         max-width: 100%;
       }
 
-      h2 {
-        margin: 0.5em 0;
-      }
-
       p {
-        line-height: 1.25em;
         margin-bottom: 0.75em;
-        color: var(--bs-dark);
       }
     `}
   />
