@@ -51,7 +51,7 @@ const Root = ({ state }) => {
           <Assesment when={data.isAssesment} />
 
           {/* Regular site pages */}
-          <List when={data.isArchive} />
+          <List when={data.isArchive} dontLazyloadFirstCard/>
           {/* isCategory should be used here */}
           {/* <Category when={data.isCategory} /> */}
           <Category when={state.router.link.startsWith("/category/")} />
