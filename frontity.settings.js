@@ -15,7 +15,7 @@ const settings = {
   name: "lim-site",
   state: {
     frontity: {
-      url: BASE_URL,
+      url: "https://staging.lookinmena.com",
       title: "LIM 2022",
       description: "LIM React",
     },
@@ -28,7 +28,7 @@ const settings = {
       name: "@frontity/wp-source",
       state: {
         source: {
-          url: BASE_URL,
+          url: "https://staging.lookinmena.com",
           params: {
             per_page: 20,
             type: ["post", "page", "category"],

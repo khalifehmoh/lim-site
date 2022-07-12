@@ -13,6 +13,7 @@ $font-size-md: $font-size-base * 1.125; // 18px
 $font-size-lg: $font-size-base * 1.25; // 20px
 $font-size-xl: $font-size-base * 1.5; // 24px
 
+// Since Emotion.js is used, make sure to define all the variables that are needed in the :root to make them accessible via JS
 :root {
     --font-size-base: #{$font-size-base};
     --font-size-xs: #{$font-size-xs};
