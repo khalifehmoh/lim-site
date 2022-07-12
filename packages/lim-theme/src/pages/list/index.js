@@ -6,13 +6,14 @@ import { Swiper, SwiperSlide } from "swiper/react/swiper-react";
 
 import Story from "../../components/UI/story";
 
-const List = ({ state }) => {
+const List = (props) => {
+  const { state, dontLazyloadFirstCard} = props;
   const data = state.source.get(state.router.link);
   const items = data.items;
 
   return (
     <section className="py-5">
-      <StoriesGrid state={state} items={items} />
+      <StoriesGrid state={state} items={items} dontLazyloadFirstCard={dontLazyloadFirstCard}/>
       {/* <Swiper
         spaceBetween={50}
         slidesPerView={4}
