@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { connect } from "frontity";
 import { getPostsFromCategory } from "../../utils";
-import { Col, Row } from "react-bootstrap";
-import Story from "../../components/UI/story";
 import StoriesGrid from "../../components/stories-grid";
 
 const Category = ({ state, actions }) => {

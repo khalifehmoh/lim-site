@@ -1,4 +1,4 @@
-import { Global, css, styled } from "frontity";
+import { Global, css } from "frontity";
 import swiper from "swiper/swiper.min.css";
 import navigation from "swiper/modules/navigation/navigation.min.css";
 import pagination from "swiper/modules/pagination/pagination.min.css";
