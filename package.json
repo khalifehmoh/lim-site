@@ -34,7 +34,8 @@
     "frontity": "^1.17.1",
     "lim-theme": "file:packages/lim-theme",
     "react-bootstrap": "^2.2.0",
-    "rtlcss": "^3.5.0"
+    "rtlcss": "^3.5.0",
+    "swiper": "^8.2.4"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.4",
