@@ -13,9 +13,9 @@
   "scripts": {
     "start": "frontity serve --port $PORT",
     "dev": "npm run css && cross-env BASE_URL=https://staging.lookinmena.com frontity dev",
-    "dev:no-css": "frontity dev",
+    "dev:no-css": "cross-env BASE_URL=https://staging.lookinmena.com frontity dev",
     "build": "npm run css && cross-env BASE_URL=https://staging.lookinmena.com frontity build",
-    "serve": "frontity serve",
+    "serve": "cross-env BASE_URL=https://staging.lookinmena.com frontity serve",
     "css": "npm-run-all css-compile css-prefix css-rtl css-minify",
     "css-compile": "sass --style expanded --source-map --embed-sources --no-error-css packages/lim-theme/src/styles/bootstrap/_bootstrap.scss  releasedStyles/bootstrap.css",
     "css-minify": "cleancss -O1 --format breakWith=lf --with-rebase --source-map --source-map-inline-sources --output releasedStyles/ --batch --batch-suffix \".min\" \"releasedStyles/*.css\" \"!releasedStyles/*.min.css\"",
