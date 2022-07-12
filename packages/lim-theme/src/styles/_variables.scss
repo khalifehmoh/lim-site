@@ -1,3 +1,6 @@
+// DO NOT USE SCSS TO WRITE STYLING RULES  
+// SCSS is only used to define variables and customize bootstrap
+
 // Customize BS variables
 // Theme colors
 $primary: #002f46;
@@ -21,4 +24,5 @@ $font-size-xl: $font-size-base * 1.5; // 24px
     --font-size-md: #{$font-size-md};
     --font-size-lg: #{$font-size-lg};
     --font-size-xl: #{$font-size-xl};
+    --swiper-navigation-color: black
 }

@@ -9,9 +9,16 @@ import { connect, Head } from "frontity";
 import Loading from "../components/UI/loading/";
 import Category from "./category/";
 import Assesment from "../custom-pages/assesment/";
+
+//Swiper
+import SwiperCore, { Navigation, Pagination, A11y } from "swiper";
+SwiperCore.use([Navigation, Pagination, A11y]);
+
+//Styles
 import GlobalStyles from "../styles/global";
 import { StyledMain } from "./styles";
 import BootstrapStyles from "../styles/bootstrap/bootstrap-styles";
+import SwiperStyles from "../styles/swiper/swiper-styles";
 
 const Root = ({ state }) => {
   const data = state.source.get(state.router.link);
@@ -30,8 +37,8 @@ const Root = ({ state }) => {
       {/* Main styles */}
       <BootstrapStyles />
       <GlobalStyles />
+      <SwiperStyles />
 
-      {/* Main content */}
       <Head>
         <title>LIM</title>
         <meta name="description" content="LIM site" />
